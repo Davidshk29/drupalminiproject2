@@ -1,0 +1,23 @@
+<?php
+function drupal_module() {
+    $items = array();
+
+    $items['drupalproject/drupal'] = array(
+        'title' => 'Project Drupal 2',
+        'page callback' => 'Drupal',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    return $items;
+}
+
+function say_hello_world() {
+    $vars = array();
+    $vars['type']="ul";
+    $vars['title'] = "";
+    $vars['attributes']=array("");
+    $vars['items'][0]="Modules";
+
+    return theme_item_list($vars);
+}
