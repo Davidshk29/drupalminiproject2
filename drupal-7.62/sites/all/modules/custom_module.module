@@ -12,7 +12,7 @@ function drupal_module() {
     return $items;
 }
 
-function say_hello_world() {
+function drupal_project() {
     $vars = array();
     $vars['type']="ul";
     $vars['title'] = "";
